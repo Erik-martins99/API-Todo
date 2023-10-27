@@ -3,7 +3,7 @@ package com.erik.todo.configuration;
 import java.text.ParseException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.context.annotation.Bean; 
+import org.springframework.context.annotation.Bean; 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
@@ -16,7 +16,7 @@ public class TestConfig {
 	@Autowired
 	private DBservices dbServices;
 
-	//@Bean
+	@Bean
 	public boolean instancia() throws ParseException {
 		dbServices.instanciaBaseDeDados();
 		return true;
